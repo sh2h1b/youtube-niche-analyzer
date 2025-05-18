@@ -3,4 +3,5 @@ pandas
 google-api-python-client
 requests-html
 matplotlib
-pytz
+lxml[html_clean]
+pyppeteer
