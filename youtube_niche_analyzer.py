@@ -7,7 +7,7 @@ from datetime import datetime
 import streamlit as st
 
 # Configuration
-API_KEY = "AIzaSyA7esa9GEjPZCecMk1-uKsvNq61c2AsX7E"  # Replace with your actual API key
+API_KEY = "AIzaSyCMyv6s-XXfIS7X5Pft4YN1p_cy-FJGxwE"  # Replace with your actual API key
 MAX_CHANNELS = 50  # Maximum channels to analyze
 RESULTS_DIR = "results"
 os.makedirs(RESULTS_DIR, exist_ok=True)
