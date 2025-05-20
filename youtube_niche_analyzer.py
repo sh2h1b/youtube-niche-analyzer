@@ -7,7 +7,7 @@ from datetime import datetime
 import streamlit as st
 
 # Configuration
-API_KEY = "AIzaSyCMyv6s-XXfIS7X5Pft4YN1p_cy-FJGxwE"  # Replace with your actual API key
+API_KEY = "AIzaSyA7esa9GEjPZCecMk1-uKsvNq61c2AsX7E"  # Replace with your actual API key
 MAX_CHANNELS = 50  # Maximum channels to analyze
 RESULTS_DIR = "results"
 os.makedirs(RESULTS_DIR, exist_ok=True)
@@ -128,7 +128,7 @@ def analyze_niche(keyword):
         subs = channel['subscribers']
         if subs < 10000:
             channel['size'] = "Small (0-10K)"
-        elif subs < 100000:
+        elif subs < 100000 :
             channel['size'] = "Medium (10K-100K)"
         elif subs < 1000000:
             channel['size'] = "Large (100K-1M)"
@@ -260,7 +260,7 @@ def main():
                         st.caption(f"🎥 {channel['videos']} videos")
                         
             else:
-                st.error("No channels found. Try a different keyword.")
+                st.error("just wanna test it, hands up")
 
 if __name__ == "__main__":
     main()
