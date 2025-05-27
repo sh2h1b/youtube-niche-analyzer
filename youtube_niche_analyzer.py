@@ -302,9 +302,10 @@ def save_results(channel_data, keyword):
     """Save analysis results to CSV"""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"{RESULTS_DIR}/{keyword.replace(' ', '_')}_{timestamp}.csv"
-    
+
     # Flatten data for CSV
     records = []
+    for channel in channel_data:
         record = {
             'channel_id': channel['id'],
             'channel_name': channel['name'],
@@ -315,17 +316,18 @@ def save_results(channel_data, keyword):
             'created_at': channel['created_at'],
             'description': channel['description']
         }
-        
+
         # Add top videos
         for i, video in enumerate(channel['top_videos'], 1):
             record[f'top_video_{i}_title'] = video['title']
             record[f'top_video_{i}_id'] = video['id']
             record[f'top_video_{i}_published'] = video['published_at']
-        
+
         records.append(record)
-    
+
     pd.DataFrame(records).to_csv(filename, index=False)
     return filename
+
 
 # Streamlit UI
 def main():
