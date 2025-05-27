@@ -7,6 +7,9 @@ from datetime import datetime
 import streamlit as st
 import uuid
 
+st.set_page_config(page_title="YouTube Niche Analyzer", layout="wide")
+
+
 # Configuration
 API_KEY = "AIzaSyA7esa9GEjPZCecMk1-uKsvNq61c2AsX7E"  # Replace with your actual API key
 MAX_CHANNELS = 50  # Maximum channels to analyze
@@ -331,7 +334,6 @@ def save_results(channel_data, keyword):
 
 # Streamlit UI
 def main():
-    st.set_page_config(page_title="YouTube Niche Analyzer", layout="wide")
     
     st.title("🎬 YouTube Niche Analyzer")
     st.markdown("Analyze YouTube niches to discover channels and identify opportunities.", unsafe_allow_html=True)
