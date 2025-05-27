@@ -305,7 +305,6 @@ def save_results(channel_data, keyword):
     
     # Flatten data for CSV
     records = []
-}_${    for channel in channel_data:
         record = {
             'channel_id': channel['id'],
             'channel_name': channel['name'],
